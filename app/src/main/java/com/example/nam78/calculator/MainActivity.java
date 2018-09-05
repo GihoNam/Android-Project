@@ -19,10 +19,13 @@ public class MainActivity extends Activity {
     {
         EditText Number1 = (EditText) findViewById(R.id.number);
         EditText Number2 = (EditText)  findViewById(R.id.number1);
+        Intent intent = new Intent(this, ADDActivity.class);
         TextView result = (TextView) findViewById(R.id.result);
         int n1 = Integer.parseInt(Number1.getText().toString());
         int n2 = Integer.parseInt(Number2.getText().toString());
         result.setText(Integer.toString(n1 + n2));
+       intent.putExtra("value", "문자열");
+        startActivity(intent);
     }
     public void subtrackClick (View v)
     {
